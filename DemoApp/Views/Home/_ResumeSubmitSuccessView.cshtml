@@ -1,0 +1,68 @@
+﻿@model SuccessViewModel
+
+<h3 style="color: green;">@Model.SuccessMessage</h3>
+
+<div>
+    <h4>Basic Details:</h4>
+    <p>Full Name: @Model.Resume.FullName</p>
+    <p>Summary: @Model.Resume.Summary</p>
+    <p>Email: @Model.Resume.Email</p>
+    <p>Phone: @Model.Resume.Phone</p>
+    <p>Address: @Model.Resume.Address</p>
+    <p>Date of Birth: @Model.Resume.DateOfBirth.ToShortDateString()</p>
+</div>
+
+<div>
+    <h4>Education Details:</h4>
+    @foreach (var educationDetail in Model.Resume.EducationDetails)
+    {
+        <p>Degree: @educationDetail.Degree</p>
+        <p>Marks: @educationDetail.Marks</p>
+        <p>Passing Year: @educationDetail.PassingYear</p>
+        <p>CGPA: @educationDetail.CGPA</p>
+        <p>Board Name: @educationDetail.BoardName</p>
+        <hr>
+    }
+</div>
+
+<div>
+    <h4>Work Experiences:</h4>
+    @foreach (var workExperience in Model.Resume.WorkExperiences)
+    {
+        <p>Company Name: @workExperience.CompanyName</p>
+        <p>Designation: @workExperience.Designation</p>
+        <p>From Date: @workExperience.FromDate.ToShortDateString()</p>
+        <p>To Date: @workExperience.ToDate.ToShortDateString()</p>
+        <hr>
+    }
+</div>
+
+<div>
+    <h4>Known Languages:</h4>
+    @foreach (var knownLanguage in Model.Resume.KnownLanguages)
+    {
+        <p>Language: @knownLanguage.Language</p>
+        <p>Read Proficiency: @knownLanguage.Read</p>
+        <p>Write Proficiency: @knownLanguage.Write</p>
+        <p>Speak Proficiency: @knownLanguage.Speak</p>
+        <hr>
+    }
+</div>
+
+<div>
+    <h4>Technical Experiences:</h4>
+    @foreach (var technicalExperience in Model.Resume.TechnicalExperiences)
+    {
+        <p>Language: @technicalExperience.Language</p>
+        <p>Proficiency Level: @technicalExperience.ProficiencyLevel</p>
+        <hr>
+    }
+</div>
+
+<div>
+    <h4>Preferences:</h4>
+    <p>Preferred Location: @Model.Resume.Preference.PreferredLocation</p>
+    <p>Current CTC: @Model.Resume.Preference.CurrentCTC</p>
+    <p>Preferred CTC: @Model.Resume.Preference.PreferredCTC</p>
+    <p>Notice Period: @Model.Resume.Preference.NoticePeriod</p>
+</div>

@@ -1,0 +1,526 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout_before_login";
+
+    var Step1_emptyViewModel = new Step1ViewModel();
+}
+
+<style>
+    label.error {
+        color: #ff0000; /* Red color for error messages */
+        font-size: 12px; /* Adjust font size as needed */
+        font-weight: normal; /* Ensure normal font weight */
+    }
+</style>
+<!-- Content Wrapper. Contains page content -->
+<div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <center>
+
+                <div class="row">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header text-center">
+                            <a href="../../index2.html" class="h3"><br>Resume Application</br></a>
+                        </div>
+                    </div>
+                </div>
+            </center>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <!-- Button-->
+                        <center>
+                            <a href="@Url.Action("Index","Admin")" class="btn btn-primary btn-block" style="width:150px;font-weight:bold"><i class="fa fa-user"></i>&nbsp; Admin Login</a>
+                        </center>
+
+                            <br /><br />
+
+
+                            <!-- ROW:1 ORDER DATA ROW START -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card card-primary card-tabs">
+                                        <div class="card-header p-0 pt-1">
+                                            <!-- List of Tabs -->
+                                            <ul class="nav nav-tabs" id="custom-tabs-five-tab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="custom-tabs-five-step1-tab" data-toggle="pill" href="#custom-tabs-five-step1" role="tab" aria-controls="custom-tabs-five-step1" aria-selected="true"><b> BASIC Details </b></a>
+                                                </li>
+                                                <li class="nav-item disabled">
+                                                    <a class="nav-link " id="custom-tabs-five-step2-tab" data-toggle="pill" href="#custom-tabs-five-step2" role="tab" aria-controls="custom-tabs-five-step2" aria-selected="false"><b>EDUCATION DETIALS</b></a>
+                                                </li>
+
+                                                <li class="nav-item disabled">
+                                                    <a class="nav-link " id="custom-tabs-five-step3-tab" data-toggle="pill" href="#custom-tabs-five-step3" role="tab" aria-controls="custom-tabs-five-step3" aria-selected="false"><b>WORK EXPIRIENCE</b></a>
+                                                </li>
+
+                                                <li class="nav-item disabled">
+                                                    <a class="nav-link " id="custom-tabs-five-step4-tab" data-toggle="pill" href="#custom-tabs-five-step4" role="tab" aria-controls="custom-tabs-five-step4" aria-selected="false"><b>KNOWN LANGUAGES</b></a>
+                                                </li>
+
+                                                <li class="nav-item disabled">
+                                                    <a class="nav-link " id="custom-tabs-five-step5-tab" data-toggle="pill" href="#custom-tabs-five-step5" role="tab" aria-controls="custom-tabs-five-step5" aria-selected="false"><b>TECHNICAL EXPERIENCE</b></a>
+                                                </li>
+
+                                                <li class="nav-item disabled">
+                                                    <a class="nav-link " id="custom-tabs-five-step6-tab" data-toggle="pill" href="#custom-tabs-five-step6" role="tab" aria-controls="custom-tabs-five-step6" aria-selected="false"><b>PREFERENCE</b></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- End of List of Tabs-->
+                                        <!-- Tab Content Started-->
+                                        <div class="card-body">
+                                            <div class="tab-content col-md-12" id="custom-tabs-five-tabContent">
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade active show" id="custom-tabs-five-step1" role="tabpanel" aria-labelledby="custom-tabs-five-step1-tab">
+
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step1_FormView.cshtml", Step1_emptyViewModel)
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+
+
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade" id="custom-tabs-five-step2" role="tabpanel" aria-labelledby="custom-tabs-five-step2-tab">
+
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step2_FormView.cshtml")
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade" id="custom-tabs-five-step3" role="tabpanel" aria-labelledby="custom-tabs-five-step3-tab">
+
+
+
+                                                    <br />
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step3_FormView.cshtml")
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade" id="custom-tabs-five-step4" role="tabpanel" aria-labelledby="custom-tabs-five-step4-tab">
+
+                                                    <br />
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step4_FormView.cshtml")
+
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade" id="custom-tabs-five-step5" role="tabpanel" aria-labelledby="custom-tabs-five-step5-tab">
+
+
+
+                                                    <br />
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step5_FormView.cshtml")
+
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+                                                <!-- TAB -->
+                                                <div class="tab-pane fade" id="custom-tabs-five-step6" role="tabpanel" aria-labelledby="custom-tabs-five-step6-tab">
+
+
+
+                                                    <br />
+                                                    <!-- DATA TABLE START  -->
+                                                    @Html.Partial("_Step6_FormView.cshtml")
+
+                                                    <!-- DATA TABLE END -->
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW:1 ORDER DATA ROW END -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ROOT ELEMENT PAGE-->
+
+
+<script>
+
+    $(document).ready(function () {
+
+        // Set global options for Toastr
+        toastr.options = {
+            closeButton: true,      // Show close button
+            progressBar: true,      // Show progress bar
+            positionClass: 'toast-top-right', // Position of the toast message
+            timeOut: 5000           // Time duration for the toast message to disappear (in milliseconds)
+        };
+
+        /******************     STEP 1 SCRIPT SECTION      *****************************************/
+
+        // Prevent default form submission behavior
+        $('#FormStep1').submit(function (e) {
+            e.preventDefault(); // This line prevents the default form submission behavior
+        });
+
+        // Ensure no other event handlers are attached to the form submit event
+        $('#Step1Save_Button').click(function () {
+            $.ajax({
+                url: '@Url.Action("Step1", "Resume")',
+                method: 'POST',
+                data: $("#FormStep1").serialize(),
+                success: function (response) {
+                    if (response.status) {
+                        toastr.success('Basic Detials added successfully!', 'Success');
+                        $('#custom-tabs-five-step2-tab').tab('show');
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Basic Details.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+
+        /******************     STEP 2 SCRIPT SECTION      *****************************************/
+        var educationCount = 0;
+
+        // Function to add education detail fields
+        function addEducationDetail() {
+            var html = `
+                    <div class="educationDetail">
+                        <div class="form-group">
+                            <label for="degree${educationCount}">Degree</label>
+                            <input type="text" class="form-control" id="degree${educationCount}" name="EducationDetails[${educationCount}].Degree" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="marks${educationCount}">Marks</label>
+                            <input type="number" class="form-control" id="marks${educationCount}" name="EducationDetails[${educationCount}].Marks" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passingYear${educationCount}">Passing Year</label>
+                            <input type="number" class="form-control" id="passingYear${educationCount}" name="EducationDetails[${educationCount}].PassingYear" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cgpa${educationCount}">CGPA</label>
+                            <input type="number" step="0.01" class="form-control" id="cgpa${educationCount}" name="EducationDetails[${educationCount}].CGPA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="boardName${educationCount}">Board Name</label>
+                            <input type="text" class="form-control" id="boardName${educationCount}" name="EducationDetails[${educationCount}].BoardName" required>
+                        </div>
+                        <hr>
+                    </div>
+                `;
+            $("#educationDetailsContainer").append(html);
+            educationCount++;
+        }
+
+        // Add education detail fields when the "Add Education Detail" button is clicked
+        $("#addEducation").click(function () {
+            addEducationDetail();
+        });
+
+        // Submit form
+        $("#Step2_SaveButton").click(function (e) {
+            e.preventDefault();
+            var formData = $("#educationForm").serialize();
+            // Ajax request to submit data
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Step2", "Resume")',
+                data: formData,
+                success: function (response) {
+                    if (response.status) {
+                        toastr.success('Work Expirience Detials added successfully!', 'Success');
+                        $('#custom-tabs-five-step3-tab').tab('show');
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Work Expirience.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+        /******************     STEP3 SCRIPT SECTION    *************************/
+
+        var workExperienceCount = 0;
+
+        // Function to add work experience fields
+        function addWorkExperience() {
+            var html = `
+                        <div class="workExperience">
+                            <div class="form-group">
+                                <label for="companyName${workExperienceCount}">Company Name</label>
+                                <input type="text" class="form-control" id="companyName${workExperienceCount}" name="WorkExperiences[${workExperienceCount}].CompanyName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="designation${workExperienceCount}">Designation</label>
+                                <input type="text" class="form-control" id="designation${workExperienceCount}" name="WorkExperiences[${workExperienceCount}].Designation" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fromDate${workExperienceCount}">From Date</label>
+                                <input type="date" class="form-control" id="fromDate${workExperienceCount}" name="WorkExperiences[${workExperienceCount}].FromDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="toDate${workExperienceCount}">To Date</label>
+                                <input type="date" class="form-control" id="toDate${workExperienceCount}" name="WorkExperiences[${workExperienceCount}].ToDate" required>
+                            </div>
+                            <hr>
+                        </div>
+                    `;
+            $("#workExperienceContainer").append(html);
+            workExperienceCount++;
+        }
+
+        // Add work experience fields when the "Add Work Experience" button is clicked
+        $("#addWorkExperience").click(function () {
+            addWorkExperience();
+        });
+
+        // Submit form
+        $("#Step3_SaveButton").click(function (e) {
+            e.preventDefault();
+            var formData = $("#workExperienceForm").serialize();
+            // Ajax request to submit data
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Step3", "Resume")',
+                data: formData,
+                success: function (response) {
+                    // Handle success response
+                    if (response.status) {
+                        toastr.success('Work Expirience Detials added successfully!', 'Success');
+                        $('#custom-tabs-five-step4-tab').tab('show');
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Work Expirience.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+        /******************     STEP 4 SCRIPT SECTION    *************************/
+        var languageCount = 0;
+
+        // Function to add language proficiency fields
+        function addLanguageProficiency() {
+            var html = `<div class="languageProficiency">
+            <div class="form-group">
+                <label for="language${languageCount}">Language</label>
+                <input type="text" class="form-control" id="language${languageCount}" name="KnownLanguages[${languageCount}].Language" required>
+            </div>
+            <div class="form-group">
+                <label>Read Proficiency</label>
+                <div style="display:inline;">
+                    <label for="readBeginner${languageCount}">Beginner</label>
+                    <input type="checkbox" id="readBeginner${languageCount}" name="KnownLanguages[${languageCount}].Read" value="Beginner">
+                </div>
+                <div style="display:inline;">
+                    <label for="readIntermediate${languageCount}">Intermediate</label>
+                    <input type="checkbox" id="readIntermediate${languageCount}" name="KnownLanguages[${languageCount}].Read" value="Intermediate">
+                </div>
+                <div style="display:inline;">
+                    <label for="readExpert${languageCount}">Expert</label>
+                    <input type="checkbox" id="readExpert${languageCount}" name="KnownLanguages[${languageCount}].Read" value="Expert">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Write Proficiency</label>
+                <div style="display:inline;">
+                    <label for="writeBeginner${languageCount}">Beginner</label>
+                    <input type="checkbox" id="writeBeginner${languageCount}" name="KnownLanguages[${languageCount}].Write" value="Beginner">
+                </div>
+                 <div style="display:inline;">
+                    <label for="writeIntermediate${languageCount}">Intermediate</label>
+                    <input type="checkbox" id="writeIntermediate${languageCount}" name="KnownLanguages[${languageCount}].Write" value="Intermediate">
+                </div>
+                <div style="display:inline;">
+                    <label for="writeExpert${languageCount}">Expert</label>
+                    <input type="checkbox" id="writeExpert${languageCount}" name="KnownLanguages[${languageCount}].Write" value="Expert">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Speak Proficiency</label>
+                <div style="display:inline;">
+                    <label for="speakBeginner${languageCount}">Beginner</label>
+                    <input type="checkbox" id="speakBeginner${languageCount}" name="KnownLanguages[${languageCount}].Speak" value="Beginner">
+                </div>
+                    <div style="display:inline;">
+                    <label for="speakIntermediate${languageCount}">Intermediate</label>
+                    <input type="checkbox" id="speakIntermediate${languageCount}" name="KnownLanguages[${languageCount}].Speak" value="Intermediate">
+                </div>
+                    <div style="display:inline;">
+                    <label for="speakExpert${languageCount}">Expert</label>
+                    <input type="checkbox" id="speakExpert${languageCount}" name="KnownLanguages[${languageCount}].Speak" value="Expert">
+                </div>
+            </div>
+            <hr>
+        </div>
+                `;
+            $("#languageContainer").append(html);
+            languageCount++;
+        }
+
+        // Add language proficiency fields when the "Add Language Proficiency" button is clicked
+        $("#addLanguage").click(function () {
+            addLanguageProficiency();
+        });
+
+        // Submit form
+        $("#Step4_SaveButton").click(function (e) {
+            e.preventDefault();
+            var formData = $("#languageForm").serialize();
+            // Ajax request to submit data
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Step4", "Resume")',
+                data: formData,
+                success: function (response) {
+                    // Handle success response
+                    if (response.status) {
+                        toastr.success('Language Proefficiancy Detials added successfully!', 'Success');
+                        $('#custom-tabs-five-step5-tab').tab('show');
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Language Proefficiancy.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+
+        /******************     STEP 5 SCRIPT SECTION    *************************/
+
+        var technicalExperienceCount = 0;
+
+        // Function to add technical experience fields
+        function addTechnicalExperience() {
+            var html = `
+                        <div class="technicalExperience">
+            <div class="form-group">
+                <label for="language${technicalExperienceCount}">Language</label>
+                <input type="text" class="form-control" id="language${technicalExperienceCount}" name="TechnicalExperiences[${technicalExperienceCount}].Language" required>
+            </div>
+            <div class="form-group">
+                <label>Proficiency Level</label><br>
+                <input type="radio" id="beginner${technicalExperienceCount}" name="TechnicalExperiences[${technicalExperienceCount}].ProficiencyLevel" value="Beginner" required>
+                <label for="beginner${technicalExperienceCount}">Beginner</label><br>
+                <input type="radio" id="intermediate${technicalExperienceCount}" name="TechnicalExperiences[${technicalExperienceCount}].ProficiencyLevel" value="Intermediate" required>
+                <label for="intermediate${technicalExperienceCount}">Intermediate</label><br>
+                <input type="radio" id="expert${technicalExperienceCount}" name="TechnicalExperiences[${technicalExperienceCount}].ProficiencyLevel" value="Expert" required>
+                <label for="expert${technicalExperienceCount}">Expert</label>
+            </div>
+            <hr>
+        </div>
+                `;
+            $("#technicalExperienceContainer").append(html);
+            technicalExperienceCount++;
+        }
+
+        // Add technical experience fields when the "Add Technical Experience" button is clicked
+        $("#addTechnicalExperience").click(function () {
+            addTechnicalExperience();
+        });
+
+        // Submit form
+        $("#Step5_SaveButton").click(function (e) {
+            e.preventDefault();
+            var formData = $("#technicalExperienceForm").serialize();
+            // Ajax request to submit data
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Step5", "Resume")',
+                data: formData,
+                success: function (response) {
+                    // Handle success response
+                    if (response.status) {
+                        toastr.success('Technical Experience Detials added successfully!', 'Success');
+                        $('#custom-tabs-five-step6-tab').tab('show');
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Technical Experience.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+
+
+        // Submit form
+        $("#Step6_SaveButton").click(function (e) {
+            e.preventDefault();
+            var formData = $("#preferenceForm").serialize();
+            // Ajax request to submit data
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Step6", "Resume")',
+                data: formData,
+                success: function (response) {
+                    // Handle success response
+                    if (response.status) {
+                        toastr.success('Job Preference Detials added successfully!', 'Success');
+                        var url = '@Url.Action("ResumeSubmitSuccess", "Resume")';
+                        $(location).attr('href', url + '?id=' + response.id);
+
+
+                    }
+                    else {
+                        toastr.error('An error occurred while adding Job Preference.', 'Error');
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+        //end if ready
+    });
+</script>

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DemoApp</title>
+    @await Html.PartialAsync("Load_All_Scripts.cshtml")
+</head>
+<body class="hold-transition" style="background-color:#e9ecef;">
+    @RenderBody()
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+﻿@model ResumeListViewModel
+
+<table id="resumeTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Full Name</th>
+            <th>Summary</th>
+            <!-- Add more columns as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var resume in Model.Resumes)
+        {
+            <tr>
+                <td>@resume.Id</td>
+                <td>@resume.FullName</td>
+                <td>@resume.Summary</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" integrity="sha384-uyjxs7Qe7AT4jd/gKcvzBRD46j4lCK5fHJ+0BFEa7syoy+d+1gxk0UtsCp2giQGJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" integrity="sha384-R2r1ERzgjF3TQhT6+JxW2uZBnDgY3e8DvY/3N9U+nVw5lC/kABInNyNDZbbs58S1" crossorigin="anonymous">
+<script>
+    $(document).ready(function () {
+        $('#resumeTable').DataTable();
+    });
+</script>
